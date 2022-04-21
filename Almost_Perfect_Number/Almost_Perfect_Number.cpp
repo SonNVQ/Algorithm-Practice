@@ -28,21 +28,21 @@ void solve() {
 
 int main()
 {
-    freopen("GHH.INP", "r", stdin); //Comment out when testing
-    freopen("GHH.OUP", "w", stdout); //Comment out when testing
-
-    solve(); //Comment out when generate test input
+//    freopen("GHH.INP", "r", stdin); //Comment out when testing
+//    freopen("GHH.OUP", "w", stdout); //Comment out when testing
+//
+//    solve(); //Comment out when generate test input
 
 //  TESTING SECTION
-//    freopen("GHH.INP", "w", stdout);
-//    random_device rd;	// only used once to initialize (seed) engine
-//    mt19937_64 rng(rd());	// random-number engine used (Mersenne-Twister in this case)
-//    uniform_int_distribution<int> uni(1, 1000000000);
-//    int k = 10000;
-//    cout << k << endl;
-//    for (int i = 1; i <= k; ++i) {
-//        cout << uni(rng) << endl;
-//    }
+    freopen("GHH.INP", "w", stdout);
+    random_device rd;	// only used once to initialize (seed) engine
+    mt19937_64 rng(rd());	// random-number engine used (Mersenne-Twister in this case)
+    uniform_int_distribution<int> uni(1, 1000000000);
+    int k = 10000;
+    cout << k << endl;
+    for (int i = 1; i <= k; ++i) {
+        cout << uni(rng) << endl;
+    }
 
     return 0;
 }

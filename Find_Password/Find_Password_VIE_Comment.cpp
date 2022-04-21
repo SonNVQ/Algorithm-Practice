@@ -7,7 +7,7 @@ using namespace std;
 //Hàm kiểm tra tính nguyên tố dựa trên nhận xét:
 //Mọi số nguyên tố > 3 đều có dạng 6k + 1 hoặc 6k - 1
 bool isPrime(int n) {
-    if (n == 2 || n == 3 || n == 5) return true;
+    if (n == 2 || n == 3 || n == 5 || n == 7) return true;
     if (n % 2 == 0 || n % 3 == 0) return false;
     int k = -1;
     const int MAX = (int)(sqrt(n));
