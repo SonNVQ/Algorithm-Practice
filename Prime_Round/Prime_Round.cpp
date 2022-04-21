@@ -10,7 +10,6 @@ bool isEnough = false; //to exit the backtracking process
 string result = ""; //store result string to print after we have total
 int isPrime[2*MAX]; //0: prime; 1: composite
 
-
 void sieve() {
     const int BOUND = (int)sqrt(2*MAX);
     for (int i = 2; i <= BOUND; ++i) {
