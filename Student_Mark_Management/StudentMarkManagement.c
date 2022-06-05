@@ -66,7 +66,7 @@ void PrintAllStudents() {
     }
 }
 
-void PrintOneStudents(struct Student student) {
+void PrintOneStudent(struct Student student) {
     printf("Student list: \n");
     printf("ID      Full_Name               Sex     Progress_Test  Assignment  Workshop  Practical_Exam  Final_Exam\n");
     printf("%-8s%-24s%-6s  %13.1f  %10.1f  %8.1f  %14.1f  %10.1f\n",
@@ -116,7 +116,7 @@ float Result(struct Student student) {
         + 0.3 * student.finalExamMark;
 }
 
-char *StudentCheck(struct Student student) {
+char *CheckStudent(struct Student student) {
     if ((student.progressTestMark > 0 &&
         student.assignmentMark > 0 &&
         student.workshopMark > 0 &&
@@ -128,7 +128,7 @@ char *StudentCheck(struct Student student) {
     return "incomplete";
 }
 
-void CheckAllStudent() {
+void CheckAllStudents() {
     printf("ID      Full_Name               Sex     Result      \n");
     for (int i = 1; i <= totalStudent; ++i) {
         if (!strlen(students[i].studentID)) continue;
@@ -136,7 +136,7 @@ void CheckAllStudent() {
                students[i].studentID,
                students[i].fullName,
                students[i].sex,
-               StudentCheck(students[i]));
+               CheckStudent(students[i]));
     }
     printf("\n");
 }
@@ -156,7 +156,7 @@ void ExportToFile() {
                students[i].workshopMark,
                students[i].practicalExamMark,
                students[i].finalExamMark,
-               StudentCheck(students[i]));
+               CheckStudent(students[i]));
     }
     fclose(text);
 }
@@ -206,7 +206,7 @@ void Menu() {
             break;
         }
         case 5: {
-            CheckAllStudent();
+            CheckAllStudents();
             break;
         }
         case 6: {
@@ -217,7 +217,7 @@ void Menu() {
             if (!strlen(student.studentID))
                 printf("Can not find student with ID %s \n", studentID);
             else
-                PrintOneStudents(student);
+                PrintOneStudent(student);
             break;
         }
         case 7: {
