@@ -132,7 +132,7 @@ void CheckAllStudent() {
     printf("ID      Full_Name               Sex     Result      \n");
     for (int i = 1; i <= totalStudent; ++i) {
         if (!strlen(students[i].studentID)) continue;
-        printf("%-8\s%-24s%-6s  %-12s\n",
+        printf("%-8s%-24s%-6s  %-12s\n",
                students[i].studentID,
                students[i].fullName,
                students[i].sex,
