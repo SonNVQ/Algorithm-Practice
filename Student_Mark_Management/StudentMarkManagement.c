@@ -85,6 +85,8 @@ void DeleteAllStudents() {
     for (int i = 1; i <= currentStudentNumber; ++i) {
         students[i] = students[0];
     }
+    currentStudentNumber = 0;
+    totalStudent = 0;
     printf("Successfully deteted all students\n");
 }
 
